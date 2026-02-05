@@ -5,3 +5,4 @@
 3. Copilot used raw errors for empty names — I noted that a real app should handle that more gracefully.  
 4. I separated `loadDecks()` and `saveDecks()` into helper functions for clarity.  
 5. Asking Copilot to “create a new deck with unique ID and save it” produced the most complete starting code.
+bleh
