@@ -1,0 +1,122 @@
+:root {
+  --forest-bg: #0f1e0f;
+  --leaf-green: #2e4d2e;
+  --moss-green: #3b6a3b;
+  --wood-brown: #5a3e2b;
+  --cream: #f5f1e3;
+  --accent: #a3d2a1;
+  --card-width: 300px;
+  --card-height: 180px;
+  --border-radius: 12px;
+  --transition: 0.3s;
+  --shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background-color: var(--forest-bg);
+  color: var(--cream);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--leaf-green);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--moss-green);
+  position: sticky;
+  top: 0;
+}
+
+#sidebar {
+  background-color: var(--moss-green);
+  width: 220px;
+  padding: 1rem;
+  height: 100vh;
+  float: left;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+  background-color: var(--wood-brown);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#sidebar li:hover {
+  background-color: var(--accent);
+  color: var(--forest-bg);
+}
+
+#main {
+  margin-left: 240px;
+  padding: 1rem;
+}
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--leaf-green);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem;
+  transition: transform var(--transition);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+button {
+  background-color: var(--wood-brown);
+  color: var(--cream);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--accent);
+  color: var(--forest-bg);
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--leaf-green);
+  border-top: 2px solid var(--moss-green);
+  font-size: 0.9rem;
+}
+
+h1::after {
+  content: " 🌿";
+}
+
+#sidebar li::before {
+  content: "☘ ";
+}
+
+.card::before {
+  content: "🍃";
+  display: block;
+  margin-bottom: 0.5rem;
+}
