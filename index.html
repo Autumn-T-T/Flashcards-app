@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards Study App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Flashcards</h1>
+    <button id="new-deck-btn">New Deck</button>
+  </header>
+
+  <div class="app-layout">
+    <nav class="sidebar" aria-label="Decks">
+      <h2>Decks</h2>
+      <ul id="deck-list">
+     
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section class="deck-header">
+        <h2 id="deck-title">Select a deck</h2>
+        <div class="deck-actions">
+          <input
+            type="search"
+            id="card-search"
+            placeholder="Search cards..."
+            aria-label="Search cards"
+          />
+          <button id="shuffle-btn">Shuffle</button>
+          <button id="new-card-btn">New Card</button>
+        </div>
+      </section>
+
+      <section class="study-area">
+        <div class="card" id="flashcard" tabindex="0">
+          <div class="card-face card-front" id="card-front">
+            Front
+          </div>
+          <div class="card-face card-back" id="card-back">
+            Back
+          </div>
+        </div>
+
+        <div class="card-controls">
+          <button id="prev-btn">Previous</button>
+          <button id="flip-btn">Flip</button>
+          <button id="next-btn">Next</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="app-footer">
+    <p> Use the buttons or your keyboard (← → Space) to study cards.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
